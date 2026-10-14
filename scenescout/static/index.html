@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SceneScout</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='2' y='5' width='20' height='14' rx='2' fill='%23e3a83b'/><circle cx='12' cy='12' r='4' fill='%23202327'/></svg>">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#e3a83b" stroke-width="2"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><circle cx="12" cy="12" r="3.2"/></svg>SceneScout</div>
+    <span id="crumb" class="muted"></span>
+    <span class="spacer"></span>
+    <span id="chips" class="hidden" style="display:flex;gap:8px;flex-wrap:wrap">
+      <span class="chip" id="cProg"></span><span class="chip" id="cPicked"></span>
+      <span class="chip ai" id="cAI"></span><span class="chip env" id="cEnv"></span>
+    </span>
+    <button class="btn small hidden" id="btnReanalyze">Phân tích lại</button>
+    <button class="btn primary hidden" id="btnExport">Xuất ảnh</button>
+    <button class="btn small hidden" id="btnProfile"></button>
+    <button class="btn small hidden" id="btnSettings">Cài đặt</button>
+    <button class="btn small hidden" id="btnBrowser" title="Mở SceneScout trong trình duyệt (kéo thả ảnh từ Google dễ hơn)">Mở trong trình duyệt</button>
+    <button class="btn small" id="btnHelp" title="Phím tắt">?</button>
+  </div>
+  <div class="progress"><div id="bar"></div></div>
+</header>
+
+<main id="view"></main>
+
+<div class="toast" id="toast"></div>
+<div class="modal" id="modal"><div class="dialog" id="dialog"></div></div>
+<input type="file" id="filePick" hidden>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
